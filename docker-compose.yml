@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./elixirproject_willard
+      dockerfile: Dockerfile
+    # volumes:
+    #   - ./volume:/app
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
